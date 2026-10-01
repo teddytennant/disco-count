@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "disco-count"
+version = "0.1.0"
+description = "Small JAX kernel of DISCO for causal discovery from count data"
+requires-python = ">=3.11"
+dependencies = [
+  "jax",
+  "numpy",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
